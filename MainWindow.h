@@ -3,7 +3,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QDockWidget>
 #include <QTextCodec>
-#include <QSerialPort>
 #include "ui_MainWindow.h"
 #include "serialSetup.h"
 #include "SandRBox.h"
@@ -18,8 +17,8 @@ public:
 	static QString ToQString(const std::string& cstr);
 
 private:
-	serialSetupWidget * m_serialSetup;
-	SandRBoxWidget * m_sandrbox;
+    serialSetupWidget * m_serialSetup;
+    SandRBoxWidget * m_sandrbox;
 	Ui::MainWindowClass ui;
 	
 private slots:
