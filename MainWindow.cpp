@@ -29,11 +29,19 @@ void MainWindow::createDockWindows()
     m_serialSetup = new serialSetupWidget(this);
     dock->setWidget(m_serialSetup);
     addDockWidget(Qt::LeftDockWidgetArea, dock);
-    QDockWidget *sandr_dock = new QDockWidget(ToQString("发送接收"),this);
-    sandr_dock->setAllowedAreas(Qt::RightDockWidgetArea);
+
+    //QDockWidget *sandr_dock = new QDockWidget(ToQString("发送接收"),this);
+    //sandr_dock->setAllowedAreas(Qt::RightDockWidgetArea);
     m_sandrbox = new SandRBoxWidget(this);
-    sandr_dock->setWidget(m_sandrbox);
-    addDockWidget(Qt::RightDockWidgetArea, sandr_dock);
+    //sandr_dock->setWidget(m_sandrbox);
+    //addDockWidget(Qt::RightDockWidgetArea, sandr_dock);
+	setCentralWidget(m_sandrbox);
+
+	QDockWidget *frontEnd_dock = new QDockWidget(ToQString("前端命令面板"),this);
+	frontEnd_dock->setAllowedAreas(Qt::RightDockWidgetArea);
+	m_frontEndButtons = new frontEndWidget(this);
+	frontEnd_dock->setWidget(m_frontEndButtons);
+	addDockWidget(Qt::RightDockWidgetArea, frontEnd_dock);
 }
 
 QString MainWindow::ToQString(const std::string & cstr)

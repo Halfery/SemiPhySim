@@ -22,7 +22,7 @@ public:
 private:
 	//friend void SandRBoxWidget::m_sendData(const char * data);
 	Ui::SerialSetup *ui;
-	const QStringList m_baudRates = {"300","600","1200","2400","4800","9600","19200","38400","76800","115200","230400","460800","921600"};
+	const QStringList m_baudRates = {"300","600","1200","2400","4800","9600","19200","38400","76800","115200","230400","460800","625000","921600"};
 	const QStringList m_serial_dataBits = {"5","6","7","8"};
 	const QStringList m_parity_checkBits = { "None","Even","Odd" };
 	const QStringList m_serial_stopBits = {"1","2"};

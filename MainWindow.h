@@ -6,6 +6,7 @@
 #include "ui_MainWindow.h"
 #include "serialSetup.h"
 #include "SandRBox.h"
+#include "frontEnd.h"
 
 class MainWindow : public QMainWindow
 {
@@ -19,6 +20,7 @@ public:
 private:
     serialSetupWidget * m_serialSetup;
     SandRBoxWidget * m_sandrbox;
+	frontEndWidget * m_frontEndButtons;
 	Ui::MainWindowClass ui;
 	
 private slots:
